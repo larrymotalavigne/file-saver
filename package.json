@@ -1,0 +1,52 @@
+{
+  "name": "@larrym/file-saver",
+  "version": "1.0.0",
+  "description": "A modern file-saver library with ESM support for downloading files in the browser",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "prepublishOnly": "npm run build",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "keywords": [
+    "file",
+    "save",
+    "download",
+    "blob",
+    "browser",
+    "esm",
+    "typescript"
+  ],
+  "author": "Larry Motalavigne",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larrymotalavigne/file-saver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/larrymotalavigne/file-saver/issues"
+  },
+  "homepage": "https://github.com/larrymotalavigne/file-saver#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
