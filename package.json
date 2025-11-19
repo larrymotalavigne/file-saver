@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "prepublishOnly": "npm run build",
-    "test": "tsx --test test/**/*.test.ts"
+    "test": "node --import tsx --test test/*.test.ts"
   },
   "keywords": [
     "file",
